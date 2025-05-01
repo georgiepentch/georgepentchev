@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>georgepentchev</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- load fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="nav-button">HOME</div>
+        <div class="nav-button">BLOG</div>
+        <div class="nav-button">MUSIC</div>
+        <div class="nav-button">ABOUT</div>
+    </header>
+    <div class="main">
+        <div id="title-container"><span id="title"></span><span id="caret">|</span></div>
+    </div>
+    <script>
+        const titleText = "Hi!\nWelcoem \b\b\bme to\ngeorgepet\bntchev.com ";
+        const letterGaps = [300, 299, 300, 283, 266, 116, 116, 83, 100, 83, 16, 100, 250, 116, 150, 233, 50, 83, 166, 133, 216, 233, 100, 166, 16, 50, 166, 83, 133, 66, 700, 100, 66, 583, 183, 66, 66, 183, 133, 66, 100, 80];
+        const typeSpeed = 0.8;
+        const totalGap = letterGaps.reduce((a, b) => a + b, 0);
+        let caret = document.getElementById("caret");
+        setTimeout(function () {caret.classList.add("blinking")}, typeSpeed*totalGap+600);
+        let title = document.getElementById("title");
+        function RemoveBackspaces(str)
+        {
+            while (str.indexOf("\b") != -1) {
+                str = str.replace(/.?\x08/, "");
+            }
+            return str;
+        }
+        var time = 0;
+        for (let i = 0; i < titleText.length; i++) {
+            time += typeSpeed*letterGaps[i];
+            let text = RemoveBackspaces(titleText.slice(0, i+1));
+            setTimeout(function () {title.innerHTML = text}, time);
+        }
+        
+    </script>
+</body>
+</html>
