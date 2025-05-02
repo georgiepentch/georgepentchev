@@ -1,14 +1,3 @@
-
-/* ADDING A GRADIENT BACKGROUND (requires removing body {background-color}) */
-/* html::before {
-    content: "";
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: linear-gradient(to bottom left, #1d1524, #16111a);
-} */
-
 body {
     background-color: #16111a;
     color: white;
@@ -33,8 +22,9 @@ header::after {
     font-family: 'Libre Baskerville', serif;
     font-size: 14px;
     position: relative;
-    /* height: 20px;
-    width: 60px; */
+    display: block;
+    text-decoration: none;
+    color: inherit;
 }
 
 .nav-button img {
@@ -78,7 +68,7 @@ header::after {
     margin-bottom: 30px;
 }
 
-.main > p {
+.main > p, .main > ul {
     font-family: 'Libre Baskerville', serif;
     font-size: 16px;
     line-height: 1.5;
@@ -116,3 +106,4 @@ header::after {
 @keyframes blink {
     50% {opacity: 0;}
 }
+

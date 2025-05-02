@@ -10,13 +10,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
-        <div class="nav-button"><img src="assets/home.svg"><span>HOME</span></div>
-        <div class="nav-button"><img src="assets/blog.svg"><span>BLOG</span></div>
-        <div class="nav-button"><img src="assets/music.svg"><span>MUSIC</span></div>
-        <div class="nav-button"><img src="assets/about.svg"><span>ABOUT</span></div>
+        <a class="nav-button" href="index.html"><img src="assets/home.svg"><span>HOME</span></a>
+        <a class="nav-button" href="blog.html"><img src="assets/blog.svg"><span>BLOG</span></a>
+        <a class="nav-button" href="music.html"><img src="assets/music.svg"><span>MUSIC</span></a>
+        <a class="nav-button" href="about.html"><img src="assets/about.svg"><span>ABOUT</span></a>
     </header>
     <div class="main">
         <div id="title-container">
@@ -27,6 +28,7 @@
         const titleText = "Hi!\nWelcoem \b\b\bme to\ngeorgepet\bntchev.com ";
         const letterGaps = [300, 299, 300, 283, 266, 116, 116, 83, 100, 83, 16, 100, 250, 116, 150, 233, 50, 83, 166, 133, 216, 233, 100, 166, 16, 50, 166, 83, 133, 66, 700, 100, 66, 583, 183, 66, 66, 183, 133, 66, 100, 80];
         const typeSpeed = 0.8;
+
         const totalGap = letterGaps.reduce((a, b) => a + b, 0);
         let caret = document.getElementById("caret");
         setTimeout(function () {caret.classList.add("blinking")}, typeSpeed*totalGap+600);
@@ -45,6 +47,7 @@
             setTimeout(function () {title.innerHTML = text}, time);
         }
         
+        let test = function () {console.log("bruh")}
     </script>
 </body>
 </html>
