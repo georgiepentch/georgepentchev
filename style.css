@@ -1,6 +1,12 @@
+:root {
+    --prim: white;
+    --bg: #16111a;
+    --acc: #ffccf7;
+}
+
 body {
-    background-color: #16111a;
-    color: white;
+    background-color: var(--bg);
+    color: var(--prim);
 }
 
 header {
@@ -13,7 +19,7 @@ header::before,
 header::after {
   content: "";
   flex: 1;
-  border: 1px solid white;
+  border: 1px solid var(--prim);
   margin: 0 20px;
 }
 
@@ -45,15 +51,15 @@ header::after {
 .main {
     width: 1000px;
     margin: auto;
+    font-family: 'Montserrat', sans-serif;
 }
 
 @media (max-width: 1100px) {
     .main {width: calc(1000% / 11)}
 }
 
-.main > h1 {
+.main h1 {
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
     font-size: 60px;
     font-weight: 400;
     margin: 10px 0px;
@@ -61,23 +67,19 @@ header::after {
 
 .date {
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-style: italic;
-    /* font-weight: 100; */
     margin-bottom: 30px;
 }
 
-.main > p, .main > ul {
-    font-family: 'Libre Baskerville', serif;
+.main p {
     font-size: 16px;
     line-height: 1.5;
     word-spacing: 1px;
     overflow-wrap: anywhere;
 }
 
-.main > h2 {
-    font-family: 'Montserrat', sans-serif;
+.main h2 {
     font-size: 32px;
     font-weight: 700;
     color: #ffdffa;
@@ -88,13 +90,12 @@ header::after {
 }
 
 #title, #caret {
-    font-family: 'Montserrat', sans-serif;
     font-size: 72px;
     white-space: pre-line;
 }
 
 #caret {
-    color: #ffdffa;
+    color: var(--acc);
     font-weight: 400;
     margin-left: -8px;
 }
@@ -107,3 +108,21 @@ header::after {
     50% {opacity: 0;}
 }
 
+.social img {
+    height: 25px;
+    vertical-align: middle;
+}
+
+.social {
+    text-decoration: inherit;
+    padding: 10px 40px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.social:hover {
+    background-color: black;
+    filter: invert();
+}
