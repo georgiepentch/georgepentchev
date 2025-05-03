@@ -115,7 +115,7 @@ header::after {
 
 .social {
     text-decoration: inherit;
-    padding: 10px 40px;
+    padding: 10px 30px;
     display: inline-block;
     vertical-align: middle;
     text-align: center;
@@ -125,4 +125,12 @@ header::after {
 .social:hover {
     background-color: black;
     filter: invert();
+}
+
+#headshot {
+    width: 250px;
+    height: 300px;
+    margin: 0 0 20px 20px;
+    background-color: white;
+    float: right;
 }
